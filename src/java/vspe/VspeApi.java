@@ -28,6 +28,10 @@ package vspe;
  */
 public class VspeApi {
 
+    static {
+        System.loadLibrary("VSPE-Wrapper");
+    }
+
     /**
      * Activate VSPE API using activation key
      */
@@ -59,6 +63,7 @@ public class VspeApi {
 
     /**
      * Destroy device by deviceId
+     *
      * @param deviceId Device id
      */
     public static native boolean destroyDevice(int deviceId);
@@ -70,6 +75,7 @@ public class VspeApi {
 
     /**
      * Get VSPE deviceId by device index
+     * 
      * @param idx device index
      *
      * @return deviceId
