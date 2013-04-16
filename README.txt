@@ -4,8 +4,8 @@ It's a test project for using of VSPE-Api (http://www.eterlogic.com/)
 
 This repo contains:
     bins -> VSPE binaries needed for using VSPE-Api
-	include -> VSPE includes
-	smaples -> examples of using api
-	src -> the main example (main.c)
+    include -> VSPE includes
+    smaples -> examples of using api
+    src -> C(JNI) and Java Wrapper sources
 	
-For building main.c in MinGW use this compiler string: gcc main.c VSPE_API.lib -o main.exe
+For building VspeApi.c in MinGW use this compiler string: gcc VspeApi.c -I{JDK_INCLUDE_PATH} -I{JDK_INCLUDE_PATH\win32} -O3 -D_JNI_IMPLEMENTATION_ -Wl,--kill-at -shared -o VSPE-Wrapper.dll -L. -lVSPE_API
